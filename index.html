@@ -1,13 +1,245 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bullying na escola</title>
+    <title>Escola Segura | Programa Integrado de Prevenção e Combate ao Bullying</title>
+    <!-- Fonte Moderna: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <!-- Barra de Acessibilidade Superior -->
+    <div class="top-accessibility-bar">
+        <div class="container accessibility-container">
+            <span>Acessibilidade e Inclusão:</span>
+            <div class="accessibility-controls">
+                <button id="btn-increase-font" aria-label="Aumentar Fonte">A+</button>
+                <button id="btn-decrease-font" aria-label="Diminuir Fonte">A-</button>
+                <button id="btn-toggle-contrast" aria-label="Alternar Alto Contraste">Alto Contraste</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cabeçalho e Navegação Principal -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="brand-logo">
+                <span class="logo-icon">🛡️</span>
+                <span class="logo-text">Escola<strong>Segura</strong></span>
+            </a>
+            
+            <nav class="main-nav" aria-label="Navegação Principal">
+                <ul class="nav-tabs" role="tablist">
+                    <li role="presentation">
+                        <button class="tab-button active" role="tab" aria-selected="true" aria-controls="tab-inicio" id="btn-inicio" data-tab="tab-inicio">Início</button>
+                    </li>
+                    <li role="presentation">
+                        <button class="tab-button" role="tab" aria-selected="false" aria-controls="tab-diagnostico" id="btn-diagnostico" data-tab="tab-diagnostico">O Problema</button>
+                    </li>
+                    <li role="presentation">
+                        <button class="tab-button" role="tab" aria-selected="false" aria-controls="tab-solucao" id="btn-solucao" data-tab="tab-solucao">Programa Metódico</button>
+                    </li>
+                    <li role="presentation">
+                        <button class="tab-button" role="tab" aria-selected="false" aria-controls="tab-faq" id="btn-faq" data-tab="tab-faq">Dúvidas Frequentes</button>
+                    </li>
+                </ul>
+            </nav>
+
+            <a href="#solicitar-demostrativo" class="cta-header-btn">Proteger Nossa Escola</a>
+        </div>
+    </header>
+
+    <!-- Conteúdo em Abas (Tab Panels) -->
+    <main class="main-content container">
+
+        <!-- ABA 1: INÍCIO / HERO & PROVA SOCIAL -->
+        <section id="tab-inicio" class="tab-panel active" role="tabpanel" aria-labelledby="btn-inicio">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="badge-tag">Lei nº 13.185/2015 & Compliance Escolar</span>
+                    <h1>Transforme o Ambiente Escolar em um Território Livre de Bullying e Cyberbullying</h1>
+                    <p class="hero-subtitle">
+                        Implemente um protocolo anti-bullying definitivo. Proteja a saúde mental dos alunos, previna litígios jurídicos e eleve o padrão educacional da sua instituição em até 90 dias.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#solicitar-demostrativo" class="btn-primary">Solicitar Apresentação Executiva</a>
+                        <a href="#depoimentos" class="btn-secondary">Ver Resultados Clínicos e Escolares</a>
+                    </div>
+                    <div class="hero-metrics">
+                        <div class="metric-card">
+                            <span class="metric-number">+140</span>
+                            <span class="metric-label">Escolas Certificadas</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-number">98%</span>
+                            <span class="metric-label">Redução de Ocorrências</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-number">45k+</span>
+                            <span class="metric-label">Alunos Impactados</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual-card">
+                    <div class="card-glass-header">
+                        <span class="status-dot"></span> Protocolo de Segurança Ativo
+                    </div>
+                    <div class="interactive-preview">
+                        <h3>Gestão Integrada Anti-Bullying</h3>
+                        <p>Monitoramento preventivo, canal confidencial de denúncias e capacitação continuada para docentes e famílias.</p>
+                        <ul class="check-list">
+                            <li>✓ Conformidade com a Legislação Federal</li>
+                            <li>✓ Mediação de Conflitos e Suporte Psicológico</li>
+                            <li>✓ Treinamento de Conscientização Digital</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Depoimentos / Carrossel Destaque -->
+            <section id="depoimentos" class="carousel-section">
+                <div class="section-header">
+                    <h2>Histórias de Transformação Comprovada</h2>
+                    <p>Veja como gestores e educadores eliminaram o bullying com a nossa metodologia.</p>
+                </div>
+                <div class="carousel-container" id="carousel-container">
+                    <!-- Injetado dinamicamente via JavaScript -->
+                </div>
+                <div class="carousel-controls">
+                    <button id="carousel-prev" aria-label="Depoimento Anterior">← Anterior</button>
+                    <div id="carousel-indicators" class="carousel-indicators"></div>
+                    <button id="carousel-next" aria-label="Próximo Depoimento">Próximo →</button>
+                </div>
+            </section>
+        </section>
+
+        <!-- ABA 2: DIAGNÓSTICO DO PROBLEMA -->
+        <section id="tab-diagnostico" class="tab-panel" role="tabpanel" aria-labelledby="btn-diagnostico">
+            <div class="section-header">
+                <h2>O Impacto Silencioso do Bullying nas Escolas</h2>
+                <p>O bullying não atinge apenas a vítima; ele compromete a reputação da escola e a segurança de toda a comunidade.</p>
+            </div>
+            <div class="grid-three-columns">
+                <div class="feature-card">
+                    <div class="feature-icon">🚨</div>
+                    <h3>Danos Psicológicos Severos</h3>
+                    <p>Queda brusca no rendimento acadêmico, ansiedade generalizada, fobia escolar e isolamento social profundo entre crianças e adolescentes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚖️</div>
+                    <h3>Responsabilidade Civil e Jurídica</h3>
+                    <p>A omissão institucional gera processos por danos morais contra estabelecimentos de ensino por descumprimento da Lei 13.185/15.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📉</div>
+                    <h3>Evasão e Perda de Reputação</h3>
+                    <p>Famílias buscam instituições que oferecem segurança comprovada. Episódios graves de agressão destroem o valor da marca escolar.</p>
+                </div>
+            </div>
+            <div class="callout-box">
+                <div class="callout-text">
+                    <h3>Sua escola possui um plano de intervenção em menos de 24 horas?</h3>
+                    <p>Casos não gerenciados adequadamente nas primeiras horas escalam para o ciberespaço e geram crises institucionais irrecuperáveis.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 3: PROGRAMA METÓDICO / SOLUÇÃO -->
+        <section id="tab-solucao" class="tab-panel" role="tabpanel" aria-labelledby="btn-solucao">
+            <div class="section-header">
+                <h2>O Pilar de Proteção Escolar em 4 Etapas</h2>
+                <p>Estrutura multidisciplinar criada por psicopedagogos, advogados especialistas e designers de comportamento.</p>
+            </div>
+            <div class="timeline-grid">
+                <div class="step-card">
+                    <div class="step-badge">Fase 1</div>
+                    <h3>Auditoria e Diagnóstico</h3>
+                    <p>Mapeamento anônimo do clima escolar para identificar focos de agressão interpessoal e vulnerabilidades nos ambientes físicos e digitais.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-badge">Fase 2</div>
+                    <h3>Capacitação Docente</h3>
+                    <p>Treinamento avançado para professores e colaboradores identificarem sinais não-verbais, intervenção imediata e mediação sem revitimização.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-badge">Fase 3</div>
+                    <h3>Canal Seguro de Denúncias</h3>
+                    <p>Implementação de plataforma criptografada e anônima para alunos reportarem abusos com triagem direta por equipe especializada.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-badge">Fase 4</div>
+                    <h3>Workshops com Famílias</h3>
+                    <p>Encontros educativos para pais sobre parentalidade consciente, monitoramento saudável da internet e identificação do cyberbullying.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 4: PERGUNTAS FREQUENTES (ACORDEÃO) -->
+        <section id="tab-faq" class="tab-panel" role="tabpanel" aria-labelledby="btn-faq">
+            <div class="section-header">
+                <h2>Perguntas Frequentes (FAQ)</h2>
+                <p>Tire suas dúvidas sobre o programa, contratação e prazos de implementação.</p>
+            </div>
+            <div class="accordion-container" id="accordion-container">
+                <!-- Injetado dinamicamente via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Formulário Final de Conversão -->
+        <section id="solicitar-demostrativo" class="conversion-section">
+            <div class="conversion-card">
+                <div class="conversion-text">
+                    <h2>Submeta Sua Instituição ao Selo "Escola Segura"</h2>
+                    <p>Receba uma consultoria preventiva gratuita com nossos especialistas em psicologia e direito educacional.</p>
+                    <ul class="benefit-list">
+                        <li>🔒 Garantia de sigilo institucional</li>
+                        <li>📋 Relatório preliminar de conformidade legal</li>
+                        <li>👥 Atendimento customizado para o porte da sua escola</li>
+                    </ul>
+                </div>
+                <form class="conversion-form" id="lead-form">
+                    <div class="form-group">
+                        <label for="form-name">Nome Completo</label>
+                        <input type="text" id="form-name" required placeholder="Ex: Profa. Maria Silva">
+                    </div>
+                    <div class="form-group">
+                        <label for="form-email">E-mail Institucional</label>
+                        <input type="email" id="form-email" required placeholder="maria@escola.com.br">
+                    </div>
+                    <div class="form-group">
+                        <label for="form-role">Cargo na Instituição</label>
+                        <select id="form-role" required>
+                            <option value="">Selecione o cargo...</option>
+                            <option value="diretor">Diretor / Mantenedor</option>
+                            <option value="coordenador">Coordenador Pedagógico</option>
+                            <option value="psicologo">Psicólogo Escolar</option>
+                            <option value="outro">Outro Cargo</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Solicitar Diagnóstico Gratuito</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé Completo -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="logo-text-footer">🛡️ Escola<strong>Segura</strong></span>
+                <p>Plataforma líder em soluções preventivas e compliance contra o bullying escolar no Brasil.</p>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 Programa Escola Segura. Todos os direitos reservados. Conformidade integral com a LGPD e Lei 13.185/15.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-<h1>Bullying na escola</h1>
-<p1>objetivo desse site:Diga não ao bullying! O bullying é uma forma de violencia que envolve agressoẽs, humilhações, ameaças, apelidos ofensivos ou exclusão repetida. nosso site tem como objetivo conscientizar sobre esse problema.</p1>
